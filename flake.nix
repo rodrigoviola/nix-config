@@ -28,9 +28,12 @@
             "awscli"
             "bat"
             "cmatrix"
+            "coreutils"
             "fastfetch"
             "gh"
             "git"
+            "gnu-sed"
+            "gnu-tar"
             "helm"
             "htop"
             "hugo"
@@ -47,19 +50,17 @@
             "tmuxinator"
             "tree"
             "watch"
+            "wget"
             "yq"
             "yt-dlp"
             #"aria2"
             #"borders"
-            #"coreutils"
             #"curl"
             #"eksctl"
             #"entr"
             #"eza"
             #"fd"
             #"fzf"
-            #"gnu-sed"
-            #"gnu-tar"
             #"gnupg"
             #"go"
             #"helmfile"
@@ -77,7 +78,6 @@
             #"ripgrep"
             #"stow"
             #"tpm"
-            #"wget"
           ];
 
           casks = [
@@ -86,7 +86,9 @@
             "battery"
             "chatgpt"
             "claude"
+            "cloudflare-warp"
             "coconutbattery"
+            "drawio"
             "font-ibm-plex"
             "ghostty"
             "google-chrome"
@@ -102,20 +104,19 @@
             "whatsapp"
             #"anydesk"
             #"balenaetcher"
-            #"bettertouchtool"  # Installing v3 manually due to old license -- https://folivora.ai/releases/btt3.552-1692.zip
+            #"bettertouchtool" # Installing v3 manually due to old license -- https://folivora.ai/releases/btt3.552-1692.zip
             #"bisq"
-            #"cloudflare-warp"
             #"docker"
-            #"drawio"
             #"firefox"
             #"focus"
             #"font-blex-mono-nerd-font" # Nerd font version of IBM Plex
             #"font-meslo-lg-nerd-font"
             #"iterm2"
             #"lens"
-            #"mactex" Used for cv.pdf, to be replaced with xu-cheng/latex-docker
+            #"mactex" # Used for cv.pdf, to be replaced with xu-cheng/latex-docker
             #"microsoft-onenote"
             #"microsoft-remote-desktop"
+            #"podman-desktop"
             #"raspberry-pi-imager"
             #"rectangle"
             #"session-manager-plugin"
@@ -178,7 +179,6 @@
 
         # Create /etc/zshrc that loads the nix-darwin environment.
         programs.zsh.enable = true; # default shell on catalina
-        # programs.fish.enable = true;
 
         # Set Git commit hash for darwin-version.
         system.configurationRevision = self.rev or self.dirtyRev or null;
