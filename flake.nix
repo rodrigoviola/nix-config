@@ -18,15 +18,17 @@
           enable = true;
 
           taps = [
+            "cirruslabs/cli" # Tart
+            "FelixKratz/formulae" # SketchyBar, Borders
             "hashicorp/tap"
-            "nikitabobko/tap"
-            "FelixKratz/formulae"
+            "nikitabobko/tap" # AeroSpace
           ];
 
           brews = [
             "aws-vault"
             "awscli"
             "bat"
+            "cirruslabs/cli/tart"
             "cmatrix"
             "coreutils"
             "fastfetch"
@@ -127,7 +129,7 @@
            masApps = {
              "Dark Mode for Safari" = 1397180934;
              "Disk Speed Test" = 425264550;
-             #"Kindle" = 302584613;
+             "Kindle" = 302584613;
              "MindNode" = 1289197285;
              "Tabs Switcher" = 1406718335;
              "Wipr" = 1320666476;
