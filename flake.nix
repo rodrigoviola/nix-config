@@ -159,20 +159,20 @@
         security.pam.enableSudoTouchIdAuth = true;
 
         # Customize Finder
-        system.defaults.finder._FXShowPosixPathInTitle = false; # Show full path in Finder title
-        system.defaults.finder.AppleShowAllExtensions = true; # Show all file extensions
-        system.defaults.finder.AppleShowAllFiles = true; # Show hidden files
-        system.defaults.finder.FXEnableExtensionChangeWarning = false; # Disable warning when changing file extension
-        system.defaults.finder.QuitMenuItem = true; # Enable quit menu item
+        system.defaults.finder._FXShowPosixPathInTitle = false;
+        system.defaults.finder.AppleShowAllExtensions = true;
+        system.defaults.finder.AppleShowAllFiles = true;
+        system.defaults.finder.FXEnableExtensionChangeWarning = false;
+        system.defaults.finder.QuitMenuItem = true;
         system.defaults.finder.ShowStatusBar = true;
         system.defaults.finder.ShowPathbar = true;
 
         # Customize Dock
         system.defaults.dock.autohide = true;
-        system.defaults.dock.autohide-delay = 500.0; # Hide Dock indefinitely
-        system.defaults.dock.show-recents = false; # Disable recent apps
-        system.defaults.dock.tilesize = 40; # Icons size
-        system.defaults.dock.persistent-others = []; # Persistent folders
+        system.defaults.dock.autohide-delay = 500.0;
+        system.defaults.dock.show-recents = false;
+        system.defaults.dock.tilesize = 40;
+        system.defaults.dock.persistent-others = [];
         system.defaults.dock.persistent-apps = [
           "/System/Applications/Launchpad.app"
         ];
@@ -185,18 +185,18 @@
         #system.defaults.trackpad.Clicking = true;
 
         # Customize Keyboard
-        system.defaults.NSGlobalDomain.InitialKeyRepeat = 15; # "Delay until repeat" == Short
-        system.defaults.NSGlobalDomain.KeyRepeat = 2; # "Key repeat rate" == Fast
-        system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false; # https://macos-defaults.com/keyboard/applepressandholdenabled.html
+        system.defaults.NSGlobalDomain.InitialKeyRepeat = 15;
+        system.defaults.NSGlobalDomain.KeyRepeat = 2;
+        system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
         system.keyboard.enableKeyMapping = true;
         system.keyboard.swapLeftCtrlAndFn = true;
 
         # Customize OS
         networking.hostName = "MacBook-Pro";
         time.timeZone = "America/Asuncion";
-        system.defaults.WindowManager.EnableStandardClickToShowDesktop = false; # Disable/Enable standard click to show desktop
+        system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
         system.defaults.screencapture = {
-          location = "~/Desktop/Screenshots"; # Set default screenshot location
+          location = "~/Desktop/Screenshots";
         };
       };
     in
