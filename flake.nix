@@ -168,14 +168,9 @@
         system.defaults.finder.ShowStatusBar = true;
         system.defaults.finder.ShowPathbar = true;
 
-        # Customize Menu Bar
-        # Reduce spacing to fit more items in MBP screen
-        # defaults -currentHost write -globalDomain NSStatusItemSpacing -int 7 # Ref: https://www.reddit.com/r/MacOS/comments/1dfu8w0/psa_reduce_your_menu_bar_spacing_to_fit_more_items/
-
         # Customize Dock
         system.defaults.dock.autohide = true;
         system.defaults.dock.autohide-delay = 500.0; # Hide Dock indefinitely
-        #system.defaults.dock.autohide = false;
         system.defaults.dock.show-recents = false; # Disable recent apps
 
         # Customize Keyboard
@@ -186,6 +181,7 @@
         system.keyboard.swapLeftCtrlAndFn = true;
 
         # Customize OS
+        networking.hostName = "MacBook-Pro";
         time.timeZone = "America/Asuncion";
       };
     in
