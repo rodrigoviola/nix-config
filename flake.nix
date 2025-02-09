@@ -161,6 +161,7 @@
         # Customize Finder
         system.defaults.finder._FXShowPosixPathInTitle = false; # Show full path in Finder title
         system.defaults.finder.AppleShowAllExtensions = true; # Show all file extensions
+        system.defaults.finder.AppleShowAllFiles = true; # Show hidden files
         system.defaults.finder.FXEnableExtensionChangeWarning = false; # Disable warning when changing file extension
         system.defaults.finder.QuitMenuItem = true; # Enable quit menu item
         system.defaults.finder.ShowStatusBar = true;
@@ -171,9 +172,17 @@
         system.defaults.dock.autohide-delay = 500.0; # Hide Dock indefinitely
         system.defaults.dock.show-recents = false; # Disable recent apps
         system.defaults.dock.tilesize = 40; # Icons size
+        system.defaults.dock.persistent-others = []; # Persistent folders
         system.defaults.dock.persistent-apps = [
           "/System/Applications/Launchpad.app"
         ];
+
+        # Customize Trackpad
+        #system.defaults.NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+        #system.defaults.NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+        #system.defaults.NSGlobalDomain."com.apple.trackpad.forceClick" = true;
+        #system.defaults.trackpad.TrackpadRightClick = true;
+        #system.defaults.trackpad.Clicking = true;
 
         # Customize Keyboard
         system.defaults.NSGlobalDomain.InitialKeyRepeat = 15; # "Delay until repeat" == Short
@@ -185,6 +194,10 @@
         # Customize OS
         networking.hostName = "MacBook-Pro";
         time.timeZone = "America/Asuncion";
+        system.defaults.WindowManager.EnableStandardClickToShowDesktop = false; # Disable/Enable standard click to show desktop
+        system.defaults.screencapture = {
+          location = "~/Desktop/Screenshots"; # Set default screenshot location
+        };
       };
     in
     {
