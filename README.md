@@ -1,8 +1,6 @@
-# Notes
-
-Starting from scratch on a brand new computer
-
 ```sh
+# How to apply config on fresh macOS install
+
 # Install dependencies
 xcode-select --install
 
