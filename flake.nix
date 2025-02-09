@@ -172,6 +172,10 @@
         system.defaults.dock.autohide = true;
         system.defaults.dock.autohide-delay = 500.0; # Hide Dock indefinitely
         system.defaults.dock.show-recents = false; # Disable recent apps
+        system.defaults.dock.tilesize = 40; # Icons size
+        system.defaults.dock.persistent-apps = [
+          "/System/Applications/Launchpad.app"
+        ];
 
         # Customize Keyboard
         system.defaults.NSGlobalDomain.InitialKeyRepeat = 15; # "Delay until repeat" == Short
