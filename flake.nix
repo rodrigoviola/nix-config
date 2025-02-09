@@ -13,12 +13,13 @@
       configuration = { pkgs, config, ... }: {
 
         # Nix settings
+        nixpkgs.hostPlatform = "aarch64-darwin";        
         nixpkgs.config.allowUnfree = true;
         nix.settings.experimental-features = "nix-command flakes";
         services.nix-daemon.enable = true;
 
         # Create /etc/zshrc that loads the nix-darwin environment.
-        programs.zsh.enable = true; # default shell on catalina
+        programs.zsh.enable = true;
 
         # Set Git commit hash for darwin-version.
         system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -26,9 +27,6 @@
         # Used for backwards compatibility, please read the changelog before changing.
         # $ darwin-rebuild changelog
         system.stateVersion = 5;
-
-        # The platform the configuration will be used on.
-        nixpkgs.hostPlatform = "aarch64-darwin";        
 
         homebrew = {
           enable = true;
@@ -158,7 +156,7 @@
         };
 
         # Enable TouchID for sudo authentication
-        # security.pam.enableSudoTouchIdAuth = true;
+        security.pam.enableSudoTouchIdAuth = true;
 
         # Customize Finder
         system.defaults.finder._FXShowPosixPathInTitle = false; # Show full path in Finder title
