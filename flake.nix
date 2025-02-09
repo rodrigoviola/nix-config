@@ -6,16 +6,18 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";     
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew, home-manager }:
     let
       configuration = { pkgs, config, ... }: {
 
         # Nix settings
+        nix.settings.experimental-features = "nix-command flakes";
         nixpkgs.hostPlatform = "aarch64-darwin";        
         nixpkgs.config.allowUnfree = true;
-        nix.settings.experimental-features = "nix-command flakes";
         services.nix-daemon.enable = true;
 
         # Create /etc/zshrc that loads the nix-darwin environment.
@@ -157,6 +159,17 @@
 
         # Enable TouchID for sudo authentication
         security.pam.enableSudoTouchIdAuth = true;
+
+        # Customize Safari
+        system.defaults.CustomUserPreferences = {
+          "com.apple.Safari" = {
+            "AlwaysRestoreSessionAtLaunch" = true;
+            "ExtensionsEnabled" = true;
+            "SearchProviderShortName" = "DuckDuckGo";
+            "ShowFullURLInSmartSearchField" = false;
+            "ShowOverlayStatusBar" = true;
+          };
+        };
 
         # Customize Finder
         system.defaults.finder._FXShowPosixPathInTitle = false;
