@@ -45,7 +45,7 @@
 
         taps = [
           "cirruslabs/cli" # Tart
-          "FelixKratz/formulae" # SketchyBar, Borders
+          "FelixKratz/formulae" # SketchyBar, JankyBorders
           "hashicorp/tap"
           "nikitabobko/tap" # AeroSpace
         ];
@@ -225,6 +225,7 @@
       system.defaults.NSGlobalDomain.InitialKeyRepeat = 15;
       system.defaults.NSGlobalDomain.KeyRepeat = 2;
       system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
+      system.defaults.hitoolbox.AppleFnUsageType = "Show Emoji & Symbols";
       system.keyboard.enableKeyMapping = true;
       system.keyboard.swapLeftCtrlAndFn = true;
 
