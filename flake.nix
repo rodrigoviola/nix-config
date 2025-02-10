@@ -229,6 +229,11 @@
       system.keyboard.enableKeyMapping = true;
       system.keyboard.swapLeftCtrlAndFn = true;
 
+      # Customize Mission Control
+      system.defaults.dock.expose-group-apps = true;
+      system.defaults.dock.mru-spaces = false;
+      system.defaults.spaces.spans-displays = true;
+
       # Customize OS
       networking.hostName = "MacBook-Pro";
       time.timeZone = "America/Asuncion";
