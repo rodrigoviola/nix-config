@@ -252,6 +252,7 @@
 
       # Customize OS
       time.timeZone = "America/Asuncion";
+      system.defaults.loginwindow.GuestEnabled = false;
       system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
       system.defaults.screencapture = {
         location = "~/Desktop/Screenshots";
