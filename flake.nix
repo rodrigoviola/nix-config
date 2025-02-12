@@ -28,7 +28,6 @@
       nix.settings.experimental-features = "nix-command flakes";
       nixpkgs.hostPlatform = "aarch64-darwin";
       nixpkgs.config.allowUnfree = true;
-      services.nix-daemon.enable = true;
 
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;
@@ -83,7 +82,6 @@
           "yq"
           "yt-dlp"
           #"aria2"
-          #"borders"
           #"curl"
           #"eksctl"
           #"entr"
@@ -119,12 +117,13 @@
           "coconutbattery"
           "drawio"
           "font-ibm-plex"
-          "ghostty"
           "google-chrome"
+          "iterm2"
           "keepingyouawake"
           "keyboardcleantool"
           "libreoffice"
           "notion"
+          "rectangle"
           "sparrow"
           "spotify"
           "telegram"
@@ -140,14 +139,13 @@
           #"focus"
           #"font-blex-mono-nerd-font" # Nerd font version of IBM Plex
           #"font-meslo-lg-nerd-font"
-          #"iterm2"
+          #"ghostty"
           #"lens"
           #"mactex" # Used for cv.pdf, to be replaced with xu-cheng/latex-docker
           #"microsoft-onenote"
           #"microsoft-remote-desktop"
           #"podman-desktop"
           #"raspberry-pi-imager"
-          #"rectangle"
           #"session-manager-plugin"
           #"utm"
           #"vmware-fusion"
