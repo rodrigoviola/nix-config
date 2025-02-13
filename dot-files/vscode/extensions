@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Theme: One Dark Pro
+
+code --install-extension esbenp.prettier-vscode
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension vscodevim.vim
+code --install-extension zhuangtongfa.Material-theme
+code --install-extension bbenoist.Nix
+code --install-extension IronGeek.vscode-env
+code --install-extension ZainChen.json
+code --install-extension ionutvmi.path-autocomplete
+code --install-extension redhat.vscode-yaml
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension mechatroner.rainbow-csv
+code --install-extension Tyriar.sort-lines
+code --install-extension HashiCorp.terraform
+code --install-extension Gruntfuggly.todo-tree

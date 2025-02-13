@@ -1,0 +1,18 @@
+[init]
+defaultBranch = master
+
+[core]
+editor = vim
+excludesfile = ~/.gitignore
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
+[includeIf "gitdir:~/__rvo/"]
+path = ~/.gitconfig-rvo
+
+[includeIf "gitdir:~/__itti/"]
+path = ~/.gitconfig-itti

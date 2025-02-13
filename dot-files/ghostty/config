@@ -1,0 +1,18 @@
+macos-titlebar-style = tabs
+
+bold-is-bright = true
+window-vsync = false
+background-opacity = 0.85
+confirm-close-surface = false
+
+font-size = 12
+font-family = "IBM Plex Mono"
+font-thicken = true
+
+theme = lovelace
+#theme = tokyonight
+
+keybind = option+right=unbind
+keybind = option+left=unbind
+keybind = option+up=unbind
+keybind = option+down=unbind

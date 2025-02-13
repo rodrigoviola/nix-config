@@ -1,0 +1,25 @@
+# tmuxinator start -p ~/__rvo/dotfiles/config/tmuxinator/itti.yml
+# tmuxinator stop -p ~/__rvo/dotfiles/config/tmuxinator/itti.yml
+
+name: test
+root: ~/__itti
+windows:
+  - minegocio-iac:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd platform/minegocio-iac
+          - sleep 1
+          - terraform validate
+        - top-right:
+          - cd platform/minegocio-iac
+          - sleep 1
+          - terraform fmt
+        - lower-left:
+          - cd platform/minegocio-iac
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd platform/minegocio-iac
+          - sleep 1
+          - terraform workspace list

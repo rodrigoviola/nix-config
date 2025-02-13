@@ -1,0 +1,11 @@
+Host github-rvo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_rvo
+    IdentitiesOnly yes
+
+Host github-itti
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_itti
+    IdentitiesOnly yes

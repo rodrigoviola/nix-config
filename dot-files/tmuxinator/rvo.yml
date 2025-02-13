@@ -1,0 +1,141 @@
+# tmuxinator start -p ~/__rvo/dotfiles/config/tmuxinator/rvo.yml
+# tmuxinator stop -p ~/__rvo/dotfiles/config/tmuxinator/rvo.yml
+
+name: rvo
+root: ~/__rvo
+windows:
+  - dashboard:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - /Applications/Sparrow.app/Contents/MacOS/Sparrow -t
+        - top-right:
+          - while true; do clear; ~/.cargo/bin/rates btc usd -t -f; sleep 300; done
+        - lower-left:
+          - sleep 1 ; clear ; neofetch
+        - lower-right:
+          - cmatrix
+
+  - cv:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd cv
+          - sleep 1
+          - clear
+        - top-right:
+          - cd cv
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd cv
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd cv
+          - sleep 1
+          - clear
+          - bat README.md
+
+  - dotfiles:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd dotfiles
+          - sleep 1
+          - clear
+        - top-right:
+          - cd dotfiles
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd dotfiles
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd dotfiles
+          - sleep 1
+          - clear
+          - bat README.md
+
+  - homelab:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd homelab
+          - sleep 1
+          - clear
+        - top-right:
+          - cd homelab
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd homelab
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd homelab
+          - sleep 1
+          - clear
+
+  - notes:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd notes
+          - sleep 1
+          - clear
+        - top-right:
+          - cd notes
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd notes
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd notes
+          - sleep 1
+          - clear
+
+  - tf-cloudflare:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd tf-cloudflare
+          - sleep 1
+          - clear
+        - top-right:
+          - cd tf-cloudflare
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd tf-cloudflare
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd tf-cloudflare
+          - sleep 1
+          - clear
+          - bat README.md
+
+  - yoga.com.py:
+      layout: 6658,272x71,0,0{136x71,0,0[136x35,0,0,0,136x35,0,36,4],135x71,137,0[135x35,137,0,2,135x35,137,36,16}]
+      panes:
+        - top-left:
+          - cd yoga.com.py
+          - sleep 1
+          - clear
+        - top-right:
+          - cd yoga.com.py
+          - sleep 1
+          - clear
+        - lower-left:
+          - cd yoga.com.py
+          - sleep 1
+          - lazygit
+        - lower-right:
+          - cd yoga.com.py
+          - sleep 1
+          - clear
+          - ls -l
