@@ -124,6 +124,7 @@
           "libreoffice"
           "notion"
           "rectangle"
+          "session-manager-plugin" # Plugin for AWS CLI to start and end sessions that connect to managed instances
           "sparrow"
           "spotify"
           "telegram"
@@ -146,7 +147,6 @@
           #"microsoft-remote-desktop"
           #"podman-desktop"
           #"raspberry-pi-imager"
-          #"session-manager-plugin"
           #"utm"
           #"vmware-fusion"
         ];
