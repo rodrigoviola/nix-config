@@ -7,7 +7,7 @@
 after-login-command = [
     "exec-and-forget open -a Safari",
     "exec-and-forget open -a BetterTouchTool",
-    "exec-and-forget open -a Ghostty",
+    "exec-and-forget open -a iTerm",
     "exec-and-forget open -a 'Tabs Switcher'"
     #"exec-and-forget open -a ChatGPT",
     #"exec-and-forget open -a Reminders",
@@ -147,8 +147,9 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-8 = 'workspace Fusion'
-alt-9 = 'workspace UTM'
+#alt-8 = 'workspace Fusion'
+#alt-9 = 'workspace UTM'
+alt-9 = 'workspace VM'
 alt-0 = 'workspace Scratch'
 
 #alt-backtick = 'workspace Terminal'
@@ -298,6 +299,10 @@ shift-down = ['volume set 0', 'mode main']
     run = 'move-node-to-workspace UTM'
 
 [[on-window-detected]]
+    if.app-id = 'org.cirruslabs.tart'
+    run = 'move-node-to-workspace VM'    
+
+[[on-window-detected]]
     if.app-id = 'com.apple.ScreenSharing'
     run = 'move-node-to-workspace Scratch'    
 
@@ -332,8 +337,9 @@ shift-down = ['volume set 0', 'mode main']
 
     Google = 3
     Terminal = 3
-    Fusion = 3
-    UTM = 3
+    #Fusion = 3
+    #UTM = 3
     Scratch = 3
     Video = 3
+    VM = 3
     Photos = 3
