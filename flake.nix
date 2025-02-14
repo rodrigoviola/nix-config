@@ -62,6 +62,8 @@
           "git"
           "gnu-sed"
           "gnu-tar"
+          "hashicorp/tap/packer"
+          "hashicorp/tap/terraform"
           "helm"
           "htop"
           "hugo"
@@ -73,7 +75,6 @@
           "mpv"
           "pwgen"
           "telnet"
-          "terraform"
           "tmux"
           "tmuxinator"
           "tree"
@@ -82,7 +83,7 @@
           "yq"
           "yt-dlp"
           #"aria2"
-          #"curl"
+          #"curl" # Already included in MacOS
           #"eksctl"
           #"entr"
           #"eza"
@@ -94,9 +95,7 @@
           #"krew"
           #"kustomize"
           #"lazydocker"
-          #"libpq" # PostgreSQL CLI tooling
           #"mas"
-          #"neofetch"
           #"neovim"
           #"nmap"
           #"node"
@@ -174,9 +173,22 @@
         "com.apple.Safari" = {
           "AlwaysRestoreSessionAtLaunch" = true;
           "ExtensionsEnabled" = true;
+          # FIXME: doesn't work
+          # "IncludeInternalDebugMenu" = true;
+          # "IncludeDevelopMenu" = true;
+          # "WebKitDeveloperExtrasEnabledPreferenceKey" = true;
+          # "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
           "SearchProviderShortName" = "DuckDuckGo";
           "ShowFullURLInSmartSearchField" = false;
           "ShowOverlayStatusBar" = true;
+        };
+      };
+
+      # Customize iTerm2
+      system.defaults.CustomUserPreferences = {
+        "com.googlecode.iterm2" = {
+          "PromptOnQuit" = false;
+          "HideTab" = true;
         };
       };
 
