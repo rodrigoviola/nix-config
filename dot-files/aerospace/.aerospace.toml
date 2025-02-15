@@ -7,7 +7,10 @@
 after-login-command = [
     "exec-and-forget open -a Safari",
     "exec-and-forget open -a BetterTouchTool",
+    "exec-and-forget open -a battery",
+    "exec-and-forget open -a KeepingYouAwake",
     "exec-and-forget open -a iTerm",
+    "exec-and-forget open -a Rectangle",
     "exec-and-forget open -a 'Tabs Switcher'"
     #"exec-and-forget open -a ChatGPT",
     #"exec-and-forget open -a Reminders",
@@ -34,9 +37,9 @@ after-startup-command = [
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-]
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
 
 # Start AeroSpace at login
 start-at-login = true
