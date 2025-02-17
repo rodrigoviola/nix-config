@@ -198,6 +198,8 @@
       system.defaults.finder.AppleShowAllExtensions = true;
       system.defaults.finder.AppleShowAllFiles = true;
       system.defaults.finder.FXEnableExtensionChangeWarning = false;
+      system.defaults.finder.FXPreferredViewStyle = "Nlsv";
+      system.defaults.finder.NewWindowTarget = "Home";
       system.defaults.finder.QuitMenuItem = true;
       system.defaults.finder.ShowStatusBar = true;
       system.defaults.finder.ShowPathbar = true;
@@ -263,7 +265,11 @@
 
       # Customize OS
       time.timeZone = "America/Asuncion";
+      system.defaults.NSGlobalDomain."com.apple.sound.beep.feedback" = 0;
+      system.defaults.NSGlobalDomain."com.apple.sound.beep.volume" = 0.0;
+      system.defaults.NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
       system.defaults.loginwindow.GuestEnabled = false;
+      system.defaults.SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
       system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
       system.defaults.screencapture = {
         location = "~/Desktop/Screenshots";
