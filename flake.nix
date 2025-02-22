@@ -19,15 +19,30 @@
     nix-homebrew,
     home-manager,
   }: {
-    darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
-      modules = [
-        ./modules/darwin
-        nix-homebrew.darwinModules.nix-homebrew
-        home-manager.darwinModules.home-manager
-      ];
+    darwinConfigurations = {
+      # M1 MacBook Pro configuration
+      "mbp" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./machines/macbook-pro-m1.nix
+          nix-homebrew.darwinModules.nix-homebrew
+          home-manager.darwinModules.home-manager
+        ];
+      };
+
+      # macOS VM configuration
+      "vm" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./machines/macos-vm.nix
+          nix-homebrew.darwinModules.nix-homebrew
+          home-manager.darwinModules.home-manager
+        ];
+      };
     };
 
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."mbp".pkgs;
+    # Expose the package sets for both configurations
+    darwinPackages = {
+      mbp = self.darwinConfigurations."mbp".pkgs;
+      vm = self.darwinConfigurations."vm".pkgs;
+    };
   };
 }

@@ -4,11 +4,11 @@
   pkgs,
   ...
 }: {
-  nix-homebrew = {
-    enable = true;
-    enableRosetta = true;
-    user = "rodrigo";
-  };
+  #nix-homebrew = {
+  #  enable = true;
+  #  enableRosetta = true;
+  #  user = "rodrigo";
+  #};
 
   homebrew = {
     enable = true;
@@ -39,6 +39,7 @@
       "helm"
       "htop"
       "hugo"
+      "ipmitool"
       "jq"
       "k9s"
       "kubectx"
@@ -46,6 +47,7 @@
       "lazygit"
       "mpv"
       "neovim"
+      "podman"
       "pwgen"
       "telnet"
       "tmux"
@@ -56,7 +58,6 @@
       "yq"
       "yt-dlp"
       #"aria2"
-      #"curl" # Already included in MacOS
       #"eksctl"
       #"entr"
       #"eza"
@@ -81,6 +82,7 @@
     casks = [
       "aerospace"
       "alfred"
+      "balenaetcher"
       "battery"
       "chatgpt"
       "claude"
@@ -103,7 +105,6 @@
       "visual-studio-code"
       "whatsapp"
       #"anydesk"
-      #"balenaetcher"
       #"bettertouchtool" # Installing v3 manually due to old license -- https://folivora.ai/releases/btt3.552-1692.zip
       #"bisq"
       #"docker"

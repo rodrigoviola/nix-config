@@ -8,7 +8,7 @@
     ./dock.nix
     ./finder.nix
     ./homebrew.nix
-    ./home-manager.nix
+    #./home-manager.nix
     ./keyboard.nix
     ./mission-control.nix
     ./networking.nix
@@ -19,7 +19,7 @@
 
   # Core system settings that don't fit elsewhere
   nix.settings.experimental-features = "nix-command flakes";
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  #nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = 5;
 }

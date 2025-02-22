@@ -17,3 +17,4 @@ code --install-extension Tyriar.sort-lines
 code --install-extension HashiCorp.terraform
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension tamasfe.even-better-toml
+code --install-extension HashiCorp.HCL

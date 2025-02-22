@@ -4,8 +4,8 @@
   pkgs,
   ...
 }: {
-  networking.computerName = "MacBook-Pro";
-  networking.hostName = "MacBook-Pro";
+  #networking.computerName = "MacBook-Pro";
+  #networking.hostName = "MacBook-Pro";
   networking.dns = ["8.8.8.8" "8.8.4.4"];
   networking.knownNetworkServices = ["Wi-Fi"];
 

@@ -21,6 +21,7 @@
 
     # Customize iTerm2
     "com.googlecode.iterm2" = {
+      "AllowClipboardAccess" = true;
       "PromptOnQuit" = false;
       "HideTab" = true;
     };

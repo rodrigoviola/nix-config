@@ -4,10 +4,10 @@
   pkgs,
   ...
 }: {
-  users.users.rodrigo = {
-    name = "rodrigo";
-    home = "/Users/rodrigo";
-  };
+  #users.users.rodrigo = {
+  #  name = "rodrigo";
+  #  home = "/Users/rodrigo";
+  #};
 
   # Enable TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
