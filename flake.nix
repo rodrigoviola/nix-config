@@ -20,19 +20,28 @@
     home-manager,
   }: {
     darwinConfigurations = {
-      # M1 MacBook Pro configuration
+      # MacBook Pro M1 configuration
       "mbp" = nix-darwin.lib.darwinSystem {
         modules = [
-          ./machines/macbook-pro-m1.nix
+          ./hosts/macbook-pro-m1.nix
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
         ];
       };
 
+      # MacBook Pro 2013 configuration
+      "mbp-2013" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./hosts/macbook-pro-2013.nix
+          nix-homebrew.darwinModules.nix-homebrew
+          home-manager.darwinModules.home-manager
+        ];
+      };      
+
       # macOS VM configuration
       "vm" = nix-darwin.lib.darwinSystem {
         modules = [
-          ./machines/macos-vm.nix
+          ./vms/macos-vm.nix
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
         ];
@@ -42,6 +51,7 @@
     # Expose the package sets for both configurations
     darwinPackages = {
       mbp = self.darwinConfigurations."mbp".pkgs;
+      mbp-2013 = self.darwinConfigurations."mbp-2013".pkgs;
       vm = self.darwinConfigurations."vm".pkgs;
     };
   };

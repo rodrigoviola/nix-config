@@ -18,3 +18,4 @@ code --install-extension HashiCorp.terraform
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension tamasfe.even-better-toml
 code --install-extension HashiCorp.HCL
+code --install-extension kamadorueda.alejandra
