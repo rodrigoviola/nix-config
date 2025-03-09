@@ -146,9 +146,4 @@ in {
       AppleDictationAutoEnable = false;
     };
   };
-
-  ########################################
-  ### Services                         ###
-  ########################################
-  services.aerospace.enable = false;
 }

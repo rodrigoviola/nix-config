@@ -30,6 +30,7 @@ in {
       "git"
       "gnu-sed"
       "gnu-tar"
+      "go"
       "hashicorp/tap/packer"
       "hashicorp/tap/terraform"
       "helm"
