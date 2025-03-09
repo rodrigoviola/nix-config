@@ -74,7 +74,6 @@ in {
   ### System Preferences & Security    ###
   ########################################
   time.timeZone = "America/Asuncion";
-  security.pam.enableSudoTouchIdAuth = true;
   system.defaults.loginwindow.GuestEnabled = false;
   system.defaults.NSGlobalDomain."com.apple.sound.beep.feedback" = 0;
   system.defaults.NSGlobalDomain."com.apple.sound.beep.volume" = 0.0;
