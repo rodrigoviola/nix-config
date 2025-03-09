@@ -44,6 +44,7 @@ in {
       "lazygit"
       "mpv"
       "neovim"
+      "npm"
       "podman"
       "pwgen"
       "telnet"
