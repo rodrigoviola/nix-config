@@ -250,7 +250,7 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
     if.app-id = 'com.spotify.client'
-    run = 'move-node-to-workspace Music'    
+    run = 'move-node-to-workspace Music'
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
@@ -291,7 +291,7 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.finder'
-    run = 'move-node-to-workspace Finder'    
+    run = 'move-node-to-workspace Finder'
 
 [[on-window-detected]]
     if.app-id = 'com.vmware.fusion'
@@ -303,11 +303,11 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
     if.app-id = 'org.cirruslabs.tart'
-    run = 'move-node-to-workspace VM'    
+    run = 'move-node-to-workspace VM'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.ScreenSharing'
-    run = 'move-node-to-workspace Scratch'    
+    run = 'move-node-to-workspace Scratch'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Photos'
@@ -316,7 +316,11 @@ shift-down = ['volume set 0', 'mode main']
 [[on-window-detected]]
     #if.app-id = 'NULL-APP-BUNDLE-ID' # mpv
     if.window-title-regex-substring = 'mpv'
-    run = 'move-node-to-workspace Video'    
+    run = 'move-node-to-workspace Video'
+
+[[on-window-detected]]
+    if.app-id = 'org.libreoffice.script'
+    run = 'move-node-to-workspace Scratch'
 
 # =================================================================
 # Multiple monitor configuration

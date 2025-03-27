@@ -26,7 +26,7 @@ in {
   ########################################
   system.defaults.dock.expose-group-apps = true;
   system.defaults.dock.mru-spaces = false;
-  system.defaults.spaces.spans-displays = true;
+  system.defaults.spaces.spans-displays = false;
 
   ########################################
   ### Finder Preferences               ###
@@ -74,7 +74,6 @@ in {
   ### System Preferences & Security    ###
   ########################################
   time.timeZone = "America/Asuncion";
-  security.pam.enableSudoTouchIdAuth = true;
   system.defaults.loginwindow.GuestEnabled = false;
   system.defaults.NSGlobalDomain."com.apple.sound.beep.feedback" = 0;
   system.defaults.NSGlobalDomain."com.apple.sound.beep.volume" = 0.0;
