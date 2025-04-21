@@ -18,6 +18,7 @@ in {
     ];
 
     brews = [
+      "atuin"
       "aws-vault"
       "awscli"
       "bat"
@@ -42,6 +43,7 @@ in {
       "kubectx"
       "kubernetes-cli"
       "lazygit"
+      "mas"
       "mpv"
       "neovim"
       "npm"
@@ -81,6 +83,7 @@ in {
     casks =
       [
         "aerospace"
+        "anydesk"
         "alfred"
         "balenaetcher"
       ]
@@ -96,6 +99,7 @@ in {
         "claude"
         "cloudflare-warp"
         "coconutbattery"
+        "cursor"
         "drawio"
         "font-ibm-plex"
         "google-chrome"
@@ -109,10 +113,10 @@ in {
         "sparrow"
         "spotify"
         "telegram"
+        "trezor-suite"
         "the-unarchiver"
         "visual-studio-code"
         "whatsapp"
-        #"anydesk"
         #"bettertouchtool" # Installing v3 manually due to old license -- https://folivora.ai/releases/btt3.552-1692.zip
         #"bisq"
         #"docker"

@@ -172,7 +172,7 @@ alt-m = 'workspace Music'
 alt-v = 'workspace Video'
 alt-c = 'workspace Notes'
 alt-t = 'workspace Terminal'
-alt-b = 'workspace Bitcoin'
+alt-b = 'workspace Crypto'
 alt-r = 'workspace Reminders'
 alt-s = 'workspace Safari'
 alt-w = 'workspace WhatsApp'
@@ -287,7 +287,11 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
     if.app-id = 'com.sparrowwallet.sparrow'
-    run = 'move-node-to-workspace Bitcoin'
+    run = 'move-node-to-workspace Crypto'
+
+[[on-window-detected]]
+    if.app-id = 'io.trezor.TrezorSuite'
+    run = 'move-node-to-workspace Crypto'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.finder'
@@ -336,7 +340,6 @@ shift-down = ['volume set 0', 'mode main']
     Reminders = 1
     Notes = 1
     Music = 1
-    Bitcoin = 1
     WhatsApp = 1
 
     Dev = 2
@@ -347,6 +350,7 @@ shift-down = ['volume set 0', 'mode main']
     #Fusion = 3
     #UTM = 3
     Scratch = 3
+    Crypto = 3
     Video = 3
     VM = 3
     Photos = 3
