@@ -18,6 +18,7 @@ in {
     ];
 
     brews = [
+      "7-zip"
       "atuin"
       "aws-vault"
       "awscli"
@@ -25,6 +26,7 @@ in {
       "btop"
       "cirruslabs/cli/tart"
       "cmatrix"
+      "colima"
       "coreutils"
       "fastfetch"
       "gh"
@@ -32,6 +34,7 @@ in {
       "gnu-sed"
       "gnu-tar"
       "go"
+      "gomplate"
       "hashicorp/tap/packer"
       "hashicorp/tap/terraform"
       "helm"
@@ -65,7 +68,6 @@ in {
       #"fd"
       #"fzf"
       #"gnupg"
-      #"go"
       #"helmfile"
       #"krew"
       #"kustomize"
@@ -74,7 +76,6 @@ in {
       #"nmap"
       #"node"
       #"oh-my-posh"
-      #"p7zip"
       #"ripgrep"
       #"stow"
       #"tpm"
@@ -108,6 +109,7 @@ in {
         "keyboardcleantool"
         "libreoffice"
         "notion"
+        "raspberry-pi-imager"
         "rectangle"
         "session-manager-plugin" # Plugin for AWS CLI to start and end sessions that connect to managed instances
         "sparrow"
@@ -130,7 +132,6 @@ in {
         #"microsoft-onenote"
         #"microsoft-remote-desktop"
         #"podman-desktop"
-        #"raspberry-pi-imager"
         #"utm"
         #"vmware-fusion"
       ];
