@@ -95,7 +95,7 @@ in {
   ########################################
   ### System Activation                ###
   ########################################
-  system.activationScripts.postUserActivation.text = ''
+  system.activationScripts.text = ''
     # Configure firewall
     # Taken from https://github.com/LnL7/nix-darwin/issues/1243#issuecomment-2605697835
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on

@@ -2,8 +2,8 @@
   description = "MacBook Pro M1 system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
 
@@ -36,7 +36,7 @@
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
         ];
-      };      
+      };
 
       # macOS VM configuration
       "vm" = nix-darwin.lib.darwinSystem {

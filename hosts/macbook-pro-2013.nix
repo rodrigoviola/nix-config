@@ -3,10 +3,11 @@
   pkgs,
   ...
 }: {
-
   imports = [
     ../modules/darwin
   ];
+
+  system.primaryUser = "rodrigo";
 
   users.users.rodrigo = {
     name = "rodrigo";
