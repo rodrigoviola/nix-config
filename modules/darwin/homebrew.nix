@@ -54,6 +54,7 @@ in {
       "nmap"
       "npm"
       "podman"
+      "podman-compose"
       "pwgen"
       "telnet"
       "tmux"
