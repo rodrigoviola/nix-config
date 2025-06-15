@@ -4,16 +4,26 @@
   pkgs,
   ...
 }: {
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Imports
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Nix Settings
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    rtl8821au # TP-Link Archer T2U PLUS [RTL8821AU]
+  ];
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Localization
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "America/Asuncion";
   console = {
@@ -21,14 +31,45 @@
     keyMap = "us";
   };
 
-  networking.hostName = "supermicro";
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Swap
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32768; # Size in MB (32 GB)
+    }
+  ];
+
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Networking
+  networking.hostName = "sys-e200-8d";
   networking.firewall.enable = false;
   networking.nameservers = ["1.1.1.1" "8.8.8.8"];
-  networking.interfaces.eno1 = {
+  networking.wireless.enable = true;
+  networking.wireless.networks.darkstar.psk = builtins.readFile /etc/nixos/secrets/darkstar.psk;
+
+  # networking.interfaces.eno1 = {
+  #   useDHCP = false;
+  #   ipv4.addresses = [
+  #     {
+  #       address = "192.168.100.251";
+  #       prefixLength = 24;
+  #     }
+  #   ];
+  #   ipv4.routes = [
+  #     {
+  #       address = "0.0.0.0";
+  #       prefixLength = 0;
+  #       via = "192.168.100.1";
+  #     }
+  #   ];
+  # };
+
+  networking.interfaces.wlp0s20u2 = {
     useDHCP = false;
     ipv4.addresses = [
       {
-        address = "192.168.100.251";
+        address = "192.168.100.252";
         prefixLength = 24;
       }
     ];
@@ -41,6 +82,8 @@
     ];
   };
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Services
   services.timesyncd.enable = true;
   services.fstrim.enable = true;
   services.openssh = {
@@ -52,10 +95,16 @@
     };
   };
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Power Management
   powerManagement.cpuFreqGovernor = "ondemand";
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Shell
   programs.zsh.enable = true;
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Users
   users.users.rodrigo = {
     isNormalUser = true;
     description = "Rodrigo";
@@ -67,6 +116,8 @@
     ];
   };
 
+  # ────────────────────────────────────────────────────────────────────────────────
+  # System Packages
   environment.systemPackages = with pkgs; [
     alejandra
     bat
@@ -76,37 +127,24 @@
     file
     gh
     git
+    ipmitool
     jq
     lazygit
-    tmux
-    tree
+    lm_sensors
     ncdu
     neovim
+    tmux
+    tree
+    usbutils
     wget
     zsh
   ];
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
+  # ────────────────────────────────────────────────────────────────────────────────
+  # Miscellaneous
   # system.copySystemConfiguration = true;
 
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.11"; # Did you read the comment?
+  # ────────────────────────────────────────────────────────────────────────────────
+  # System State Version
+  system.stateVersion = "24.11";
 }
