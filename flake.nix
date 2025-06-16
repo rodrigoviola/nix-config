@@ -21,7 +21,7 @@
   }: {
     darwinConfigurations = {
       # MacBook Pro M1 configuration
-      "mbp" = nix-darwin.lib.darwinSystem {
+      "mbp-m1" = nix-darwin.lib.darwinSystem {
         modules = [
           ./hosts/macbook-pro-m1.nix
           nix-homebrew.darwinModules.nix-homebrew
@@ -50,7 +50,7 @@
 
     # Expose the package sets for both configurations
     darwinPackages = {
-      mbp = self.darwinConfigurations."mbp".pkgs;
+      mbp-m1 = self.darwinConfigurations."mbp-m1".pkgs;
       mbp-2013 = self.darwinConfigurations."mbp-2013".pkgs;
       vm = self.darwinConfigurations."vm".pkgs;
     };
