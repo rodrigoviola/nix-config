@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./homebrew.nix
-    #./home-manager.nix
+    ./home-manager.nix
     ./nix.nix
     ./system.nix
   ];
