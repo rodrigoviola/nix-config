@@ -28,6 +28,7 @@ in {
       "cmatrix"
       "colima"
       "coreutils"
+      "displayplacer"
       "eksctl"
       "fastfetch"
       "gh"
