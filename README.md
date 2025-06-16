@@ -8,10 +8,10 @@ xcode-select --install
 sh <(curl -L https://nixos.org/nix/install)
 
 # Install nix-darwin
-nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake '.#mbp-m1'
+sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake '.#mbp-m1'
 
 # Rebuild config
-darwin-rebuild switch --flake '.#mbp-m1'
+sudo darwin-rebuild switch --flake '.#mbp-m1'
 
 # Utils
 nix flake metadata
