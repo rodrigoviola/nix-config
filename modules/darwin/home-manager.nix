@@ -2,6 +2,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   home-manager = {
@@ -23,7 +24,22 @@
         file.".vimrc".source = ../../dotfiles/vim/.vimrc;
       };
 
+      home.activation.installPrezto = lib.mkAfter ''
+        echo $SHELL
+        if [ ! -d "$HOME/.zprezto" ]; then
+          /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
+
+          # setopt EXTENDED_GLOB
+          # for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+          #   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+          # done
+        fi
+      '';
+
       programs.home-manager.enable = true;
+      programs.zsh = {
+        enable = true;
+      };
     };
   };
 }
