@@ -41,7 +41,7 @@
       # macOS VM configuration
       "vm" = nix-darwin.lib.darwinSystem {
         modules = [
-          ./vms/macos-vm.nix
+          ./hosts/macos-vm.nix
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
         ];
