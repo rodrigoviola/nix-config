@@ -112,14 +112,15 @@ in {
         "keyboardcleantool"
         "libreoffice"
         "notion"
+        "opencore-patcher"
         "raspberry-pi-imager"
         "rectangle"
         "session-manager-plugin" # Plugin for AWS CLI to start and end sessions that connect to managed instances
         "sparrow"
         "spotify"
         "telegram"
-        "trezor-suite"
         "the-unarchiver"
+        "trezor-suite"
         "visual-studio-code"
         "whatsapp"
         #"bettertouchtool" # Installing v3 manually due to old license -- https://folivora.ai/releases/btt3.552-1692.zip
