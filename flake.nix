@@ -1,5 +1,5 @@
 {
-  description = "MacBook Pro M1 system flake";
+  description = "Workstation system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
@@ -46,13 +46,6 @@
           home-manager.darwinModules.home-manager
         ];
       };
-    };
-
-    # Expose the package sets for both configurations
-    darwinPackages = {
-      mbp-m1 = self.darwinConfigurations."mbp-m1".pkgs;
-      mbp-2013 = self.darwinConfigurations."mbp-2013".pkgs;
-      vm = self.darwinConfigurations."vm".pkgs;
     };
   };
 }
